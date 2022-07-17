@@ -3,7 +3,7 @@
     --secondary-bg: #090909;
     --font-color: #dee2e6;
     --accent-color: #228be6;
-    --input-color: #ced4da;
+    --input-color: #adb5bd;
 }
 *{
     box-sizing: border-box;
@@ -68,8 +68,9 @@ main{
                 margin-top: 1rem;
             }
             font-size: 1.05rem;
-            margin:2.75rem 3rem;
+            margin:2rem 3rem;
             line-height: 1.4;
+            font-weight: normal;
         }
         
     }
@@ -88,7 +89,7 @@ main{
             font-size: 1.25rem;
         }
         div.input-container{
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
             label{
                 color: var(--input-color);
                 display: block;
@@ -97,11 +98,14 @@ main{
                 font-size: 14px;
             }
             input{
-                min-width: 340px;
+                width: max(200px, 80%);
                 min-height: 30px;
-                border: 1px solid black;
+                border: 1.25px solid var(--input-color);
+                background-color: var(--secondary-bg);
                 border-radius: 4px;
-                
+                color: var(--input-color);
+                font-size: 16px;
+                padding-left: .15rem;
             }
         }
         h3.description{
@@ -127,3 +131,47 @@ main{
         }
     }
 }
+@media (max-width: 1280px){
+    main{
+        section.left{
+            header{
+                gap: .5rem;
+                font-size: 2.25rem;
+                padding: 1.25rem;
+                img{
+                    width: 5.25rem;
+                }
+            }
+        }
+        section.right{
+            .header-description{
+                h3:last-of-type{
+                    margin-top: .5rem;
+                }
+                font-size: 1rem;
+                margin:1.25rem 1.5rem;
+            }
+            
+        }
+        fieldset{
+            padding: 1.25rem 1.5rem;
+            margin:1rem 0;
+            h3{
+                color: var(--accent-color);
+                font-size: 1.15rem;
+            }
+            div.input-container{
+                margin-bottom: 1.25rem;
+            }
+            h3.description{
+                grid-column: 1/span 2;
+                margin-bottom: 1.25rem;
+            }
+    
+        }
+        .button-container{
+            padding: 0rem 1.5rem;
+        }
+    }
+}
+// @media (max-widt)
