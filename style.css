@@ -5,8 +5,10 @@
 }
 
 body {
-  color: red;
-  font-family: cursive;
+  color: #212529;
+  font-family: "Poppins", sans-serif;
+  background-color: #e9ecef;
+  line-height: 1.25;
 }
 
 main {
@@ -19,21 +21,27 @@ main section.left {
   width: max(375px, 40vw);
   height: 100vh;
   position: relative;
-  color: bisque;
+  color: #f8f9fa;
 }
 main section.left header {
+  color: #f59f00;
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 0.5rem;
   position: absolute;
   font-size: 2.5rem;
-  top: 50%;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: -0.25px;
+  font-weight: 700;
+  top: 36%;
   transform: translateY(-50%);
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.63);
+  background-color: rgba(0, 0, 0, 0.82);
+  padding: 1.5rem;
 }
 main section.left header img {
-  width: 7rem;
+  width: 5.5rem;
   z-index: 1;
 }
 main section.left footer {
@@ -42,6 +50,7 @@ main section.left footer {
   justify-content: center;
   position: absolute;
   bottom: 0;
+  padding: 0.5rem;
 }
 main section.right {
   width: 60vw;
@@ -50,11 +59,16 @@ main section.right {
   flex-direction: column;
 }
 main section.right .header-description {
-  margin: 3rem 0.5rem;
+  font-size: 1.15rem;
+  margin: 2.75rem 2rem;
+  line-height: 1.4;
 }
 main fieldset {
-  padding: 1rem 0.5rem;
+  border: none;
+  background-color: #f8f9fa;
   display: grid;
+  padding: 2rem 2rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
   grid-template-columns: repeat(2, 1fr);
 }
 main fieldset div.input-container {
@@ -63,13 +77,27 @@ main fieldset div.input-container {
 main fieldset div.input-container label {
   display: block;
   text-transform: uppercase;
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.4rem;
+  font-size: 14px;
 }
 main fieldset div.input-container input {
-  min-width: 250px;
-  min-height: 28px;
+  min-width: 340px;
+  min-height: 30px;
+  border: 1px solid black;
+  border-radius: 4px;
 }
 main fieldset h3.description {
   grid-column: 1/span 2;
+  margin-bottom: 1.5rem;
+}
+main .button-container {
+  padding: 2rem 2rem;
+}
+main .button-container button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.15rem;
+  border-radius: 4px;
+  border: 2px solid #212529;
   margin-bottom: 1rem;
 }/*# sourceMappingURL=style.css.map */
