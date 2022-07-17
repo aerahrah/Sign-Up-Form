@@ -1,3 +1,11 @@
+:root {
+  --main-bg: #080808;
+  --secondary-bg: #090909;
+  --font-color: #dee2e6;
+  --accent-color: #228be6;
+  --input-color: #ced4da;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -5,9 +13,9 @@
 }
 
 body {
-  color: #212529;
+  color: var(--font-color);
   font-family: "Poppins", sans-serif;
-  background-color: #e9ecef;
+  background-color: var(--main-bg);
   line-height: 1.25;
 }
 
@@ -16,15 +24,14 @@ main {
   width: 100vw;
 }
 main section.left {
-  background: url("imgs/heroImg.jpg") no-repeat center;
+  background: url("imgs/book_blue.jpg") no-repeat center;
   background-size: cover;
   width: max(375px, 40vw);
   height: 100vh;
   position: relative;
-  color: #f8f9fa;
 }
 main section.left header {
-  color: #f59f00;
+  color: var(--accent-color);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -59,22 +66,30 @@ main section.right {
   flex-direction: column;
 }
 main section.right .header-description {
-  font-size: 1.15rem;
-  margin: 2.75rem 2rem;
+  font-size: 1.05rem;
+  margin: 2.75rem 3rem;
   line-height: 1.4;
+}
+main section.right .header-description h3:last-of-type {
+  margin-top: 1rem;
 }
 main fieldset {
   border: none;
-  background-color: #f8f9fa;
+  background-color: var(--secondary-bg);
   display: grid;
-  padding: 2rem 2rem;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+  padding: 2rem 3rem;
+  box-shadow: 0 2px 8px rgba(28, 28, 28, 0.9);
   grid-template-columns: repeat(2, 1fr);
+}
+main fieldset h3 {
+  color: var(--accent-color);
+  font-size: 1.25rem;
 }
 main fieldset div.input-container {
   margin-bottom: 1rem;
 }
 main fieldset div.input-container label {
+  color: var(--input-color);
   display: block;
   text-transform: uppercase;
   margin-bottom: 0.4rem;
@@ -91,13 +106,18 @@ main fieldset h3.description {
   margin-bottom: 1.5rem;
 }
 main .button-container {
-  padding: 2rem 2rem;
+  padding: 2rem 3rem;
 }
 main .button-container button {
+  background-color: var(--main-bg);
   display: inline-block;
-  padding: 0.75rem 1.5rem;
+  padding: 0.85rem 1.75rem;
   font-size: 1.15rem;
   border-radius: 4px;
-  border: 2px solid #212529;
+  color: var(--accent-color);
+  border: 2px solid var(--accent-color);
   margin-bottom: 1rem;
+}
+main .button-container a {
+  color: var(--accent-color);
 }/*# sourceMappingURL=style.css.map */
