@@ -1,0 +1,75 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: red;
+  font-family: cursive;
+}
+
+main {
+  display: flex;
+  width: 100vw;
+}
+main section.left {
+  background: url("imgs/heroImg.jpg") no-repeat center;
+  background-size: cover;
+  width: max(375px, 40vw);
+  height: 100vh;
+  position: relative;
+  color: bisque;
+}
+main section.left header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  font-size: 2.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.63);
+}
+main section.left header img {
+  width: 7rem;
+  z-index: 1;
+}
+main section.left footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+}
+main section.right {
+  width: 60vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+main section.right .header-description {
+  margin: 3rem 0.5rem;
+}
+main fieldset {
+  padding: 1rem 0.5rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+main fieldset div.input-container {
+  margin-bottom: 1rem;
+}
+main fieldset div.input-container label {
+  display: block;
+  text-transform: uppercase;
+  margin-bottom: 0.2rem;
+}
+main fieldset div.input-container input {
+  min-width: 250px;
+  min-height: 28px;
+}
+main fieldset h3.description {
+  grid-column: 1/span 2;
+  margin-bottom: 1rem;
+}/*# sourceMappingURL=style.css.map */
