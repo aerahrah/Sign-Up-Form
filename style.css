@@ -31,20 +31,19 @@ main section.left {
   position: relative;
 }
 main section.left header {
-  color: var(--accent-color);
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
+  width: 100%;
   position: absolute;
+  top: 36%;
+  letter-spacing: -0.25px;
   font-size: 2.5rem;
   font-family: "Poppins", sans-serif;
-  letter-spacing: -0.25px;
-  font-weight: 700;
-  top: 36%;
   transform: translateY(-50%);
-  width: 100%;
   background-color: rgba(0, 0, 0, 0.82);
+  color: var(--accent-color);
   padding: 1.5rem;
 }
 main section.left header img {
@@ -52,61 +51,58 @@ main section.left header img {
   z-index: 1;
 }
 main section.left footer {
-  width: 100%;
   display: flex;
   justify-content: center;
+  width: 100%;
   position: absolute;
   bottom: 0;
   padding: 0.5rem;
 }
 main section.right {
-  width: 60vw;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
+  width: 60vw;
+  min-height: 100vh;
 }
 main section.right .header-description {
+  line-height: 1.4;
   font-size: 1.05rem;
   margin: 2rem 3rem;
-  line-height: 1.4;
-  font-weight: normal;
 }
 main section.right .header-description h3:last-of-type {
   margin-top: 1rem;
 }
 main fieldset {
-  border: none;
-  background-color: var(--secondary-bg);
   display: grid;
-  padding: 2rem 3rem;
-  box-shadow: 0 2px 8px rgba(28, 28, 28, 0.9);
   grid-template-columns: repeat(2, 1fr);
-}
-main fieldset h3 {
-  color: var(--accent-color);
-  font-size: 1.25rem;
+  border: none;
+  padding: 2rem 3rem;
+  background-color: var(--secondary-bg);
+  box-shadow: 0 2px 8px rgba(28, 28, 28, 0.9);
 }
 main fieldset div.input-container {
   margin-bottom: 1.5rem;
 }
 main fieldset div.input-container label {
-  color: var(--input-color);
   display: block;
-  text-transform: uppercase;
-  margin-bottom: 0.4rem;
   font-size: 14px;
+  text-transform: uppercase;
+  color: var(--input-color);
+  margin-bottom: 0.4rem;
 }
 main fieldset div.input-container input {
-  width: max(220px, 80%);
+  width: max(230px, 80%);
   min-height: 30px;
+  font-size: 16px;
+  color: var(--input-color);
   border: 1.25px solid var(--input-color);
   background-color: var(--secondary-bg);
   border-radius: 4px;
-  color: var(--input-color);
-  font-size: 16px;
   padding-left: 0.15rem;
 }
 main fieldset h3.description {
+  font-size: 1.25rem;
+  color: var(--accent-color);
   grid-column: 1/span 2;
   margin-bottom: 1.5rem;
 }
@@ -114,13 +110,13 @@ main .button-container {
   padding: 2rem 3rem;
 }
 main .button-container button {
-  background-color: var(--main-bg);
   display: inline-block;
-  padding: 0.85rem 1.75rem;
   font-size: 1.15rem;
-  border-radius: 4px;
   color: var(--accent-color);
+  background-color: var(--main-bg);
   border: 2px solid var(--accent-color);
+  border-radius: 4px;
+  padding: 0.85rem 1.75rem;
   margin-bottom: 1rem;
 }
 main .button-container a {
@@ -131,11 +127,9 @@ footer.mobileFooter {
   display: none;
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 1080px) {
   main section.left header {
-    gap: 0.5rem;
     font-size: 2.25rem;
-    padding: 1.25rem;
   }
   main section.left header img {
     width: 5.25rem;
@@ -143,7 +137,7 @@ footer.mobileFooter {
   main section.right .header-description {
     font-size: 1rem;
     margin: 1.25rem 1.5rem;
-    margin-top: 3.25rem;
+    margin-top: 3.25vh;
   }
   main section.right .header-description h3:last-of-type {
     margin-top: 0.5rem;
@@ -152,14 +146,12 @@ footer.mobileFooter {
     padding: 1.25rem 1.5rem;
     margin: 1rem 0;
   }
-  main fieldset h3 {
-    color: var(--accent-color);
-    font-size: 1.15rem;
-  }
   main fieldset div.input-container {
     margin-bottom: 1.25rem;
   }
   main fieldset h3.description {
+    font-size: 1.15rem;
+    color: var(--accent-color);
     grid-column: 1/span 2;
     margin-bottom: 1.25rem;
   }
@@ -172,8 +164,12 @@ footer.mobileFooter {
     flex-direction: column;
   }
   main section.left {
-    width: 100vw;
     height: 22.5rem;
+    width: 100vw;
+  }
+  main section.left header {
+    top: 50%;
+    transform: translateY(-50%);
   }
   main section.left footer {
     display: none;
@@ -190,36 +186,33 @@ footer.mobileFooter {
     margin-top: 1rem;
   }
   main fieldset {
-    align-items: center;
     width: 100vw;
-    padding: 2.25rem 4rem;
-    margin: 1.5rem 0;
+    align-items: center;
     -moz-column-gap: 2.5rem;
          column-gap: 2.5rem;
+    padding: 2.25rem 4rem;
+    margin: 1.5rem 0;
   }
   main fieldset div.input-container input {
     width: max(240px, 100%);
   }
   main fieldset h3.description {
+    font-size: 1.15rem;
+    color: var(--accent-color);
     grid-column: 1/span 2;
     text-align: center;
-    color: var(--accent-color);
-    font-size: 1.15rem;
   }
   main .button-container {
-    width: 100%;
-    padding: 0rem 1.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-  main .button-container button {
-    margin-bottom: 0.75rem;
+    width: 100%;
+    padding: 0rem 1.5rem;
   }
   footer.mobileFooter {
+    width: 100%;
     display: flex;
     justify-content: center;
-    width: 100%;
     position: relative;
     bottom: -3.75rem;
     font-size: 14px;
