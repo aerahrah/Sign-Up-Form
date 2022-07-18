@@ -97,7 +97,7 @@ main fieldset div.input-container label {
   font-size: 14px;
 }
 main fieldset div.input-container input {
-  width: max(200px, 80%);
+  width: max(220px, 80%);
   min-height: 30px;
   border: 1.25px solid var(--input-color);
   background-color: var(--secondary-bg);
@@ -125,6 +125,10 @@ main .button-container button {
 }
 main .button-container a {
   color: var(--accent-color);
+}
+
+footer.mobileFooter {
+  display: none;
 }
 
 @media (max-width: 1280px) {
@@ -162,7 +166,7 @@ main .button-container a {
     padding: 0rem 1.5rem;
   }
 }
-@media (max-width: 820px) {
+@media (max-width: 860px) {
   main {
     flex-direction: column;
   }
@@ -170,22 +174,13 @@ main .button-container a {
     width: 100vw;
     height: 22.5rem;
   }
-  main section.left header {
-    gap: 0.5rem;
-    font-size: 2.25rem;
-    padding: 1.25rem;
-  }
-  main section.left header img {
-    width: 5.25rem;
-  }
   main section.right {
     min-height: 50vh;
     width: 100vw;
     align-items: center;
   }
   main section.right .header-description {
-    font-size: 1rem;
-    margin: 3rem 1.5rem;
+    margin: 2.5rem 1.5rem;
     text-align: center;
   }
   main section.right .header-description h3:last-of-type {
@@ -194,9 +189,14 @@ main .button-container a {
   main fieldset {
     align-items: center;
     width: 100vw;
-    padding: 2.5rem 1.5rem;
+    padding: 2.25rem 4rem;
     margin: 1.5rem 0;
-    margin-bottom: 3.5rem;
+    margin-bottom: 2rem;
+    -moz-column-gap: 2.5rem;
+         column-gap: 2.5rem;
+  }
+  main fieldset div.input-container input {
+    width: max(240px, 100%);
   }
   main fieldset h3 {
     text-align: center;
@@ -208,6 +208,30 @@ main .button-container a {
     margin-bottom: 3rem;
   }
   main .button-container {
+    width: 100%;
     padding: 0rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  main .button-container button {
+    margin-bottom: 2rem;
+  }
+  footer.mobileFooter {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    bottom: -28px;
+    font-size: 14px;
+    padding: 6px;
+  }
+}
+@media (max-width: 580px) {
+  main fieldset {
+    grid-template-columns: 1fr;
+  }
+  main fieldset h3.description {
+    grid-column: 1;
   }
 }/*# sourceMappingURL=style.css.map */
