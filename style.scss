@@ -74,8 +74,7 @@ main{
         }
         
     }
-    fieldset{
-        
+    fieldset{      
         border: none;
         background-color: var(--secondary-bg);
         display: grid;
@@ -151,8 +150,8 @@ footer.mobileFooter{
                 }
                 font-size: 1rem;
                 margin:1.25rem 1.5rem;
-            }
-            
+                margin-top: 3.25rem;
+            }  
         }
         fieldset{
             padding: 1.25rem 1.5rem;
@@ -181,6 +180,9 @@ footer.mobileFooter{
         section.left{
             width: 100vw;
             height: 22.5rem;
+            footer{
+                display: none;
+            }
         }
         section.right{
             min-height: 50vh;
@@ -190,31 +192,25 @@ footer.mobileFooter{
                 h3:last-of-type{
                     margin-top: 1rem;
                 }
-                margin:2.5rem 1.5rem;
                 text-align: center;
-            }
-            
+            } 
         }
         fieldset{
             align-items: center;
             width: 100vw;
             padding: 2.25rem 4rem;
             margin:1.5rem 0;
-            margin-bottom: 2rem;
             column-gap: 2.5rem;
             div.input-container{
                 input{
                     width: max(240px, 100%);
                 }
             }
-            h3{
+            h3.description{
+                grid-column: 1/span 2;
                 text-align: center;
                 color: var(--accent-color);
                 font-size: 1.15rem;
-            }
-            h3.description{
-                grid-column: 1/span 2;
-                margin-bottom: 3rem;
             }
     
         }
@@ -225,7 +221,7 @@ footer.mobileFooter{
             flex-direction: column;
             align-items: center;
             button{
-                margin-bottom: 2rem;
+                margin-bottom: .75rem;
             }
         }
     }
@@ -234,7 +230,7 @@ footer.mobileFooter{
         justify-content: center;
         width: 100%;
         position: relative;
-        bottom:  -28px;
+        bottom:  -3.75rem;
         font-size: 14px;
         padding: 6px;
         
@@ -242,6 +238,20 @@ footer.mobileFooter{
 }
 @media (max-width: 580px){
     main{
+        section.left{
+            width: 100vw;
+            height: 17.5rem;
+        }
+        section.right{
+            .header-description{
+                h3:last-of-type{
+                    margin-top: .5rem;
+                }
+                font-size: 1rem;
+                margin: 1.25rem .75rem;
+                margin-top: 3.25rem;
+            }  
+        }
         fieldset{
             grid-template-columns: 1fr;
             div.input-container{

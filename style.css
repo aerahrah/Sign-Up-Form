@@ -143,6 +143,7 @@ footer.mobileFooter {
   main section.right .header-description {
     font-size: 1rem;
     margin: 1.25rem 1.5rem;
+    margin-top: 3.25rem;
   }
   main section.right .header-description h3:last-of-type {
     margin-top: 0.5rem;
@@ -174,13 +175,15 @@ footer.mobileFooter {
     width: 100vw;
     height: 22.5rem;
   }
+  main section.left footer {
+    display: none;
+  }
   main section.right {
     min-height: 50vh;
     width: 100vw;
     align-items: center;
   }
   main section.right .header-description {
-    margin: 2.5rem 1.5rem;
     text-align: center;
   }
   main section.right .header-description h3:last-of-type {
@@ -191,21 +194,17 @@ footer.mobileFooter {
     width: 100vw;
     padding: 2.25rem 4rem;
     margin: 1.5rem 0;
-    margin-bottom: 2rem;
     -moz-column-gap: 2.5rem;
          column-gap: 2.5rem;
   }
   main fieldset div.input-container input {
     width: max(240px, 100%);
   }
-  main fieldset h3 {
+  main fieldset h3.description {
+    grid-column: 1/span 2;
     text-align: center;
     color: var(--accent-color);
     font-size: 1.15rem;
-  }
-  main fieldset h3.description {
-    grid-column: 1/span 2;
-    margin-bottom: 3rem;
   }
   main .button-container {
     width: 100%;
@@ -215,19 +214,31 @@ footer.mobileFooter {
     align-items: center;
   }
   main .button-container button {
-    margin-bottom: 2rem;
+    margin-bottom: 0.75rem;
   }
   footer.mobileFooter {
     display: flex;
     justify-content: center;
     width: 100%;
     position: relative;
-    bottom: -28px;
+    bottom: -3.75rem;
     font-size: 14px;
     padding: 6px;
   }
 }
 @media (max-width: 580px) {
+  main section.left {
+    width: 100vw;
+    height: 17.5rem;
+  }
+  main section.right .header-description {
+    font-size: 1rem;
+    margin: 1.25rem 0.75rem;
+    margin-top: 3.25rem;
+  }
+  main section.right .header-description h3:last-of-type {
+    margin-top: 0.5rem;
+  }
   main fieldset {
     grid-template-columns: 1fr;
   }
