@@ -1,9 +1,9 @@
 :root{
     --main-bg: #080808;
     --secondary-bg: #090909;
-    --font-color: #dee2e6;
+    --font-color: #adb5bd;
     --accent-color: #228be6;
-    --input-color: #adb5bd;
+    --input-color: #868e96;
 }
 *{
     box-sizing: border-box;
@@ -35,14 +35,14 @@ main{
             position: absolute;
             top: 36%;
             letter-spacing: -.25px;
-            font-size: 2.5rem;
+            font-size: 2rem;
             font-family: 'Poppins', sans-serif;
             transform: translateY(-50%);
             background-color: rgba(0,0,0,0.82);
             color: var(--accent-color);
             padding: 1.5rem;
             img{
-                width: 5.5rem;
+                width: 4rem;
                 z-index: 1;
             }
         }
@@ -63,7 +63,7 @@ main{
         .header-description{
             line-height: 1.4;
             font-size: 1.05rem;
-            margin: 2rem 3rem;
+            margin: 3rem 3rem;
             h3:last-of-type{
                 margin-top: 1rem;
             }
@@ -88,13 +88,17 @@ main{
             }
             input{
                 width: max(230px, 80%);
-                min-height: 30px;
+                min-height: 28px;
                 font-size: 16px;
                 color: var(--input-color);     
                 border: 1.25px solid var(--input-color);
                 background-color: var(--secondary-bg);
                 border-radius: 4px;
                 padding-left: .15rem;
+                outline: none;
+            }
+            input:focus{
+                border: 1.25px solid var(--accent-color);
             }
         }
         h3.description{
@@ -109,15 +113,33 @@ main{
         button{
             display: inline-block;
             font-size: 1.15rem;
+            font-weight: 700;
             color: var(--accent-color);
             background-color: var(--main-bg);
             border: 2px solid var(--accent-color);
             border-radius: 4px;
             padding: .85rem 1.75rem;
             margin-bottom: 1rem;
+            cursor: pointer;
+
         }
         a{
+            cursor: pointer;
             color: var(--accent-color);
+        }
+        button:hover{
+            background-color: var(--accent-color);
+            color: var(--main-bg);
+            border: 2px solid var(--accent-color);
+        }
+        button:active{
+            transform: scale(.975);
+        }
+        a:hover{
+           transform: scale(.975);
+        }
+        a:active{
+            transform: scale(.975); 
         }
     }
 }
@@ -128,14 +150,6 @@ footer.mobileFooter{
 //Media Query for Tablet view
 @media (max-width: 1080px){
     main{
-        section.left{    
-            header{
-                font-size: 2.25rem;
-                img{
-                    width: 5.25rem;
-                }
-            }
-        }
         section.right{
             .header-description{
                 font-size: 1rem;

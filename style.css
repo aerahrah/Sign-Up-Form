@@ -1,9 +1,9 @@
 :root {
   --main-bg: #080808;
   --secondary-bg: #090909;
-  --font-color: #dee2e6;
+  --font-color: #adb5bd;
   --accent-color: #228be6;
-  --input-color: #adb5bd;
+  --input-color: #868e96;
 }
 
 * {
@@ -39,7 +39,7 @@ main section.left header {
   position: absolute;
   top: 36%;
   letter-spacing: -0.25px;
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-family: "Poppins", sans-serif;
   transform: translateY(-50%);
   background-color: rgba(0, 0, 0, 0.82);
@@ -47,7 +47,7 @@ main section.left header {
   padding: 1.5rem;
 }
 main section.left header img {
-  width: 5.5rem;
+  width: 4rem;
   z-index: 1;
 }
 main section.left footer {
@@ -67,7 +67,7 @@ main section.right {
 main section.right .header-description {
   line-height: 1.4;
   font-size: 1.05rem;
-  margin: 2rem 3rem;
+  margin: 3rem 3rem;
 }
 main section.right .header-description h3:last-of-type {
   margin-top: 1rem;
@@ -92,13 +92,17 @@ main fieldset div.input-container label {
 }
 main fieldset div.input-container input {
   width: max(230px, 80%);
-  min-height: 30px;
+  min-height: 28px;
   font-size: 16px;
   color: var(--input-color);
   border: 1.25px solid var(--input-color);
   background-color: var(--secondary-bg);
   border-radius: 4px;
   padding-left: 0.15rem;
+  outline: none;
+}
+main fieldset div.input-container input:focus {
+  border: 1.25px solid var(--accent-color);
 }
 main fieldset h3.description {
   font-size: 1.25rem;
@@ -112,15 +116,32 @@ main .button-container {
 main .button-container button {
   display: inline-block;
   font-size: 1.15rem;
+  font-weight: 700;
   color: var(--accent-color);
   background-color: var(--main-bg);
   border: 2px solid var(--accent-color);
   border-radius: 4px;
   padding: 0.85rem 1.75rem;
   margin-bottom: 1rem;
+  cursor: pointer;
 }
 main .button-container a {
+  cursor: pointer;
   color: var(--accent-color);
+}
+main .button-container button:hover {
+  background-color: var(--accent-color);
+  color: var(--main-bg);
+  border: 2px solid var(--accent-color);
+}
+main .button-container button:active {
+  transform: scale(0.975);
+}
+main .button-container a:hover {
+  transform: scale(0.975);
+}
+main .button-container a:active {
+  transform: scale(0.975);
 }
 
 footer.mobileFooter {
@@ -128,12 +149,6 @@ footer.mobileFooter {
 }
 
 @media (max-width: 1080px) {
-  main section.left header {
-    font-size: 2.25rem;
-  }
-  main section.left header img {
-    width: 5.25rem;
-  }
   main section.right .header-description {
     font-size: 1rem;
     margin: 1.25rem 1.5rem;
