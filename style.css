@@ -2,7 +2,7 @@
   --main-bg: #080808;
   --secondary-bg: #090909;
   --font-color: #adb5bd;
-  --accent-color: #228be6;
+  --accent-color: #4c6ef5;
   --input-color: #868e96;
 }
 
@@ -67,7 +67,7 @@ main section.right {
 main section.right .header-description {
   line-height: 1.4;
   font-size: 1.05rem;
-  margin: 3rem 3rem;
+  margin: 3vh 3vw;
 }
 main section.right .header-description h3:last-of-type {
   margin-top: 1rem;
@@ -76,7 +76,7 @@ main fieldset {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   border: none;
-  padding: 2rem 3rem;
+  padding: 2vh 3vw;
   background-color: var(--secondary-bg);
   box-shadow: 0 2px 8px rgba(28, 28, 28, 0.9);
 }
