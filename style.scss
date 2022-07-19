@@ -25,6 +25,7 @@ main{
         background-size: cover;
         width: max(375px,40vw);
         height: 100vh;
+        min-height: 660px;
         position: relative;
         header{
             display: flex;
@@ -65,7 +66,7 @@ main{
             font-size: 1.05rem;
             margin: 3vh 3vw;
             h3:last-of-type{
-                margin-top: 1rem;
+                margin-top: 1vh;
             }
         }    
     }
@@ -73,7 +74,7 @@ main{
         display: grid;
         grid-template-columns: repeat(2,1fr);
         border: none;
-        padding: 2vh 3vw;
+        padding: 2rem 3rem;
         background-color: var(--secondary-bg);
         box-shadow: 0 2px 8px rgba(28,28,28,.9);
 
@@ -185,6 +186,7 @@ footer.mobileFooter{
         flex-direction: column;
         section.left{
             height: 22.5rem;
+            min-height: 280px;
             width: 100vw;
             header{
                 top: 50%;
